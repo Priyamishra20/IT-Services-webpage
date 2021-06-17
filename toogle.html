@@ -1,0 +1,113 @@
+<style>.list {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+/*   position: fixed; */
+  width: 100%;
+/*   z-index: 3; */
+}
+
+.list ul {  margin: 0;  padding: 0;  list-style: none;  overflow: hidden;  background-color: #fff;}
+
+.list li a {  display: block;/*   padding: 20px 20px; */  border-right: 1px solid #f4f4f4;  text-decoration: none;}
+
+.list li a:hover,.header .menu-btn:hover {  background-color: #f4f4f4;}
+
+.list .logo {  display: block;  float: left;  font-size: 2em;  padding: 10px 20px;  text-decoration: none;}
+
+/* menu */
+
+.list .menu {  clear: both;  max-height: 0;  transition: max-height .2s ease-out;}
+
+/* menu icon */
+
+.list .menu-icon {  cursor: pointer;  display: inline-block;  float: right;  padding: 28px 20px;  position: relative;  user-select: none;}
+
+.list .menu-icon .navicon {  background: #333;  display: block;  height: 2px;  position: relative;  transition: background .2s ease-out;  width: 18px;}
+
+.list .menu-icon .navicon:before,
+.list .menu-icon .navicon:after {  background: #333;  content: '';  display: block;  height: 100%;  position: absolute;  transition: all .2s ease-out;  width: 100%;}
+
+.list .menu-icon .navicon:before {  top: 5px;}
+
+.list .menu-icon .navicon:after {  top: -5px;}
+
+/* menu btn */
+
+.list .menu-btn {  display: none;}
+
+.list .menu-btn:checked ~ .menu {  max-height: 240px;}
+
+.list .menu-btn:checked ~ .menu-icon .navicon {  background: transparent;}
+
+.list .menu-btn:checked ~ .menu-icon .navicon:before {  transform: rotate(-45deg);}
+
+.list .menu-btn:checked ~ .menu-icon .navicon:after {  transform: rotate(45deg);}
+
+.list .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.list .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {  top: 0;}
+
+/* 48em = 768px */
+@media (min-width: 48em) {  .header li {    float: left;  } /* 
+ .list li a {    padding: 20px 30px;  } */
+ 
+  .list .menu {    clear: none;    float: right;    max-height: none;  } 
+  .list .menu-icon {    display: none;  }
+  
+  .menu-list nav{width:100%;display:inline-block;}
+.menu-list nav ul{width:100%;display:inline-block;}
+.menu-list nav ul li{position:relative;display:inline-block;margin-left:30px;padding:40px 0;}
+.menu-list nav ul li a{text-decoration:none;color:#d5dde2;font-size:20px;font-weight:600;line-height:24px;}
+.menu-list nav ul li a:hover{color:#000;}
+.menu-list nav ul li:hover .listeffect{display:block;}
+.menu-list nav ul li .listeffect{display:none;background:rgba(43, 84, 108, 0.5);position:absolute;width:150px;text-align:left;padding-left:20px;}
+.menu-list nav ul li .listeffect li{margin-left:0;padding:10px 0;display:block;}
+   }</style>
+
+
+
+<div class="menu-list-search">
+<div class="menu-list">
+
+<nav class="list">  
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+ <ul class="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Property <i class="fa fa-chevron-down"></i></a>
+<ul class="listeffect">
+<li><a href="#">property1</a></li>
+<li><a href="#">property1</a></li>
+<li><a href="#">property1</a></li>
+<li><a href="#">property1</a></li>
+</ul>
+</li>
+<li><a href="#">Pages <i class="fa fa-chevron-down"></i></a>
+<ul class="hover-list">
+<li><a href="#">page1</a></li>
+<li><a href="#">page1</a></li>
+<li><a href="#">page1</a></li>
+<li><a href="#">page1</a></li>
+</ul>
+</li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+</script>

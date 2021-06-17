@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "font/Font-Awesome-master/js-packages/@fortawesome/fontawesome-common-types/",
+			"problemMatcher": [],
+			"label": "npm: install - font/Font-Awesome-master/js-packages/@fortawesome/fontawesome-common-types",
+			"detail": "install dependencies from package"
+		}
+	]
+}
